@@ -78,6 +78,7 @@ ul {
     align-items: flex-start;
     justify-content: space-between;
     gap: 60px;
+    position: relative;
 }
 
 .jb .jb__info {
@@ -646,6 +647,7 @@ h2 {
     font-size: 1.4rem;
     line-height: 160%;
     color: var(--text-gray);
+    text-align: center;
 }
 
 mark {
@@ -708,7 +710,15 @@ mark {
         width: 800px;
         margin: 0 auto;
     }
-
+    .five-k .five-k__inner{
+        gap: 0px;
+    }
+    .range .range__item:first-child span{
+        left: -4px;
+    }
+    .range .range__item:last-child span{
+        right: -13px;
+    }
     html {
         font-size: 12px;
     }
@@ -742,6 +752,9 @@ mark {
     .footer {
         padding: 100px 0;
     }
+    .socials .socials__item{
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width: 840px) {
@@ -749,8 +762,191 @@ mark {
         width: 500px;
         margin: 0 auto;
     }
-
+    .fieldset input[type='range']::-webkit-slider-thumb {
+        height: 20px;
+        width: 20px;
+    }
+    main{
+        overflow-x:hidden;
+    }
     html {
-        font-size: 8px;
+        font-size: 10px;
+    }
+    .nav .nav__list{
+        justify-content: flex-start;
+    }
+    .nav .nav__link{
+        font-size: 2rem;
+    }
+    .jb .jb__img, .five-k .five-k__img{
+        position: absolute;
+        left: 110%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 65%;
+    }
+    .five-k .five-k__inner{
+        position: relative;
+    }
+    .five-k .five-k__img{
+        left: 0;
+        right: 110%;
+    }
+    .jb .jb__info{
+        max-width: 360px;
+    }
+    .card{
+        gap: 25px;
+    }
+    .card .card__img{
+        width: 25%;
+    }
+    .services .services__list{
+        gap: 30px 45px;
+    }
+    .question .question__answer{
+        font-size: 1.5rem;
+    }
+    .question .question__button{
+        width: 30px;
+        height: 30px;
+    }
+    .question .question__title{
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .container {
+        width: 320px;
+        margin: 0 auto;
+    }
+    .range .range__values{
+        width: calc(100% - 20px);
+    }
+    html {
+        font-size: 10px;
+    }
+    .main>section{
+        padding: 30px 0 30px 0;
+    }
+    .jb .jb__img, .five-k .five-k__img{
+        display: none;
+    }
+    .nav .nav__link{
+        font-size: 1.2rem;
+    }
+    .nav .nav__list{
+        justify-content: center;
+    }
+    .jb .jb__title{
+        font-size: 2.5em;
+    }
+    .jb .jb__btn{
+        font-size: 1.4rem;
+        letter-spacing: 0.06rem;
+        padding: 10px 15px;
+    }
+    .five-k__item img{
+        width: 14px;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    .five-k .five-k__title, .services .services__title{
+        margin-bottom: 20px;
+    }
+    .services .services__item {
+        flex: 1 1 100%;
+    }
+    .question .question__title{
+        max-width: 240px;
+        font-size: 1.5rem;
+    }
+    .question .question__answer {
+        font-size: 1.3rem;
+        line-height: 165%;
+    }
+    .calc .calc__title{
+        margin-bottom: 30px;
+    }
+    .fieldset .fieldset__title{
+        font-size: 1.5rem;
+    }
+    .calc .calc__fieldset, .calc .calc__aside{
+        padding: 30px 15px;
+    }
+    .custom-radio+label::before{
+        width: 14px;
+        height: 14px;
+    }
+    .fieldset{
+        gap: 35px;
+    }
+    .fieldset .fieldset__block input[type=number]{
+        width: 100%;
+        padding: 5px 10px;
+    }
+    .range .range__item:nth-child(2) {
+        display: none;
+    }
+    
+    .range .range__item:nth-child(3) {
+        right: 9px;
+    }
+    
+    .range .range__item:nth-child(4) {
+        display: none;
+    }
+    
+    .range .range__item:nth-child(5) {
+        right: 3px;
+    }
+    
+    .range .range__item:nth-child(6) {
+        display: none;
+    }
+    
+    .range .range__item:nth-child(7) {
+        right: -3px;
+    }
+    
+    .range .range__item:nth-child(8) {
+        display: none;
+    }
+    
+    .range .range__item:nth-child(9) {
+        right: -9px;
+    }
+    
+    .range .range__item:nth-child(10) {
+        display: none;
+    }
+    .calc .calc__price{
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    .info .info__btn {
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 6px;
+    }
+    .active .info .info__text{
+        margin-bottom: 30px;
+    }
+    .footer .footer__nav .nav__list, .socials .socials__list{
+        gap: 20px;
+    }
+    .to-top p{
+        display: none;
+    }
+    .to-top{
+        top: 75%;
+        left: 95%;
+    }
+    .to-top img{
+        width: 40px;
+        height: 40px;
     }
 }
