@@ -658,4 +658,99 @@ mark {
         width: 1200px;
         margin: 0 auto;
     }
+
+    html {
+        font-size: 16px;
+    }
+
+    .jb .jb__img,
+    .five-k .five-k__img {
+        width: 50%;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .services .services__list {
+        gap: 50px;
+    }
+
+    .calc .calc__main {
+        flex-direction: column;
+    }
+
+    .calc .calc__fieldset {
+        width: 100%;
+    }
+
+    .calc .calc__aside {
+        width: 100%;
+    }
+
+    .info .info__btn {
+        width: 30%;
+    }
+
+    .calc .calc__price {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .calc .calc__price span {
+        flex-grow: 0;
+
+    }
+}
+
+@media screen and (max-width: 1221px) {
+    .container {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    html {
+        font-size: 12px;
+    }
+    .nav .nav__list{
+        gap: 40px;
+    }
+    .jb .jb__info {
+        gap: 20px;
+    }
+
+    .five-k .five-k__item {
+        gap: 5px;
+    }
+
+    .five-k__item img {
+        width: 20px;
+    }
+
+    .main>section {
+        padding: 100px 0 100px 0;
+    }
+
+    .services .services__title {
+        margin-bottom: 50px;
+    }
+
+    .question {
+        padding: 15px 0;
+    }
+
+    .footer {
+        padding: 100px 0;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .container {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    html {
+        font-size: 8px;
+    }
 }
