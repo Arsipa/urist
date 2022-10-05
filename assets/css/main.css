@@ -814,6 +814,9 @@ mark {
     .question .question__title{
         max-width: 400px;
     }
+    .to-top p{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -937,9 +940,6 @@ mark {
     }
     .footer .footer__nav .nav__list, .socials .socials__list{
         gap: 20px;
-    }
-    .to-top p{
-        display: none;
     }
     .to-top{
         top: 75%;

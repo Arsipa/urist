@@ -38,97 +38,106 @@ window.onload = () => {
 
         // IP
         if (IP.checked && YCH6.checked) {
-            price = 1900 + WORKERS.value * 600;
+            price = 1900 + WORKERS.value * 500;
+            if (operations > 50) {
+                price = "Индивидуально";
+            }
         }
         if (IP.checked && YCH15.checked) {
             if (operations <= 10) {
-                price = 6700 + WORKERS.value * 600;
+                price = 6700 + WORKERS.value * 500;
             }
             if (operations > 10 && operations <= 20) {
-                price = 11000 + WORKERS.value * 600;
+                price = 11000 + WORKERS.value * 500;
             }
             if (operations > 20 && operations <= 50) {
-                price = 20000 + WORKERS.value * 600;
+                price = 20000 + WORKERS.value * 500;
             }
             if (operations > 50) {
                 price = 25800;
-                price += WORKERS.value > 10 ? (WORKERS.value - 9) * 600 : 600;
+                price += WORKERS.value > 10 ? (WORKERS.value - 9) * 500 : 500;
             }
         }
         if (IP.checked && OCH.checked) {
             if (operations <= 10) {
-                price = 9100 + WORKERS.value * 600;
+                price = 9100 + WORKERS.value * 500;
             }
             if (operations > 10 && operations <= 20) {
-                price = 15800 + WORKERS.value * 600;
+                price = 15800 + WORKERS.value * 500;
             }
             if (operations > 20 && operations <= 50) {
-                price = 23600 + WORKERS.value * 600;
+                price = 23600 + WORKERS.value * 500;
             }
             if (operations > 50) {
                 price = 32400;
-                price += WORKERS.value > 10 ? (WORKERS.value - 9) * 600 : 600;
+                price += WORKERS.value > 10 ? (WORKERS.value - 9) * 500 : 500;
             }
         }
 
         // OOO
         if (OOO.checked && YCH6.checked) {
             if (operations <= 10) {
-                price = 6700 + WORKERS.value * 600;
+                price = 6700 + WORKERS.value * 500;
             }
             if (operations > 10 && operations <= 20) {
-                price = 11000 + WORKERS.value * 600;
+                price = 11000 + WORKERS.value * 500;
             }
             if (operations > 20 && operations <= 50) {
-                price = 20000 + WORKERS.value * 600;
+                price = 20000 + WORKERS.value * 500;
             }
             if (operations > 50) {
-                price = 25800;
-                price += WORKERS.value > 10 ? (WORKERS.value - 9) * 600 : 600;
+                price = "Индивидуально";
             }
         }
         if (OOO.checked && YCH15.checked) {
             if (operations <= 10) {
-                price = 6700 + WORKERS.value * 600;
+                price = 6700 + WORKERS.value * 500;
             }
             if (operations > 10 && operations <= 20) {
-                price = 11000 + WORKERS.value * 600;
+                price = 11000 + WORKERS.value * 500;
             }
             if (operations > 20 && operations <= 50) {
-                price = 20000 + WORKERS.value * 600;
+                price = 20000 + WORKERS.value * 500;
             }
             if (operations > 50) {
                 price = 25800;
-                price += WORKERS.value > 10 ? (WORKERS.value - 9) * 600 : 600;
+                price += WORKERS.value > 10 ? (WORKERS.value - 9) * 500 : 500;
             }
         }
         if (OOO.checked && OCH.checked) {
             if (operations <= 10) {
-                price = 9100 + WORKERS.value * 600;
+                price = 9100 + WORKERS.value * 500;
             }
             if (operations > 10 && operations <= 20) {
-                price = 15800 + WORKERS.value * 600;
+                price = 15800 + WORKERS.value * 500;
             }
             if (operations > 20 && operations <= 50) {
-                price = 23600 + WORKERS.value * 600;
+                price = 23600 + WORKERS.value * 500;
             }
             if (operations > 50) {
                 price = 32400;
-                price += WORKERS.value > 10 ? (WORKERS.value - 9) * 600 : 600;
+                price += WORKERS.value > 10 ? (WORKERS.value - 9) * 500 : 500;
             }
         }
 
         document.querySelector(".range-value").innerText = operations;
 
-        finalPrice.innerText = price
-            .toString()
-            .split("")
-            .reverse()
-            .join("")
-            .replace(/\d{3}(?=.)/g, "$& ")
-            .split("")
-            .reverse()
-            .join("");
+        if (typeof price == "string") {
+            finalPrice.style.fontSize = "0.9em";
+            finalPrice.style.paddingRight = "0px";
+            finalPrice.innerText = "Индивидуально";
+        } else {
+            finalPrice.innerText =
+                price
+                    .toString()
+                    .split("")
+                    .reverse()
+                    .join("")
+                    .replace(/\d{3}(?=.)/g, "$& ")
+                    .split("")
+                    .reverse()
+                    .join("") + " р/мес";
+        }
     }
 
     RANGE.oninput = () => {
